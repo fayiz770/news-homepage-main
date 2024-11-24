@@ -29,9 +29,17 @@ h5 {
     font-size: 1.2em;
 }
 
+p {
+    line-height: 2em;
+    color: var(--dark-grayish-blue);
+}
+
 
 body {
+    position: relative;
+    font-size: 15px;
     font-family: var(--font-family);
+    padding-bottom: 2em;
 }
 
 .container {
@@ -47,7 +55,7 @@ body {
 
 .main-content {
     display: grid;
-    gap: 2.75em;
+    gap: 1.5em;
 }
 
 .header {
@@ -56,8 +64,12 @@ body {
     justify-content: space-between;
 }
 
+picture {
+    width: 100%;
+}
+
 picture > img {
-    width: 380px;
+    width: 100%;
 }
 
 
@@ -72,6 +84,9 @@ picture > img {
 }
 
 .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     letter-spacing: .5em;
     text-decoration: none;
     color: black;
@@ -81,9 +96,14 @@ picture > img {
     background: var(--soft-red);
 }
 
+.button:hover {
+    background: black;
+    color: white;
+}
+
 .new {
     display: grid;
-    gap: 2em;
+    gap: 1em;
     padding: 2em 1em;
     background: black;
     color: var(--off-white);
@@ -113,19 +133,22 @@ picture > img {
 }
 
 .main {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
     gap: 2em;
 }
 
 .card {
     display: flex;
-    align-items: end;
+    align-items: start;
     justify-content: center;
     gap: 2em;
 }
 
 .card > img {
     width: 120px;
+    max-height: 150px;
     height: 90%;
 }
 
@@ -134,5 +157,85 @@ picture > img {
     gap: 1em;
 }
 
+.mask {
+    display: grid;
+    gap: 3rem;
+}
 
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 4em;
+    height: 100vh;
+    position: fixed;
+    background: var(--off-white);
+    padding: 2em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 8em;
+    box-shadow: 1px 1px 100px black;
+}
+
+.x {
+    text-align: end;
+    font-size: 2em;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    list-style: none;
+}
+
+h3:hover {
+    color: var(--soft-orange);
+}
+
+
+h5:hover {
+    color: var(--soft-red);
+}
+
+
+@media (min-width: 700px){
+    .container {
+        padding: 5em 10em;
+    }
+
+
+    .mask {
+        display: flex;
+    }
+
+    .main-content {
+        width: 80%;
+        gap: 2em;
+    }
+
+    .title-and-text {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .main {
+        flex-direction: row;
+    }
+
+    .new {
+        min-width: 400px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li:hover {
+        color: var(--soft-red);
+    }
+
+}
 
