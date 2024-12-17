@@ -1,7 +1,7 @@
 # Frontend Mentor - News homepage
 
 ![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)
-#[Live Demo](https://mellow-pavlova-c23b36.netlify.app/)
+# [Live Demo](https://mellow-pavlova-c23b36.netlify.app/)
 
 ## Welcome! 👋
 
